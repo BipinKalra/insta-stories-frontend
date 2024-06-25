@@ -1,0 +1,45 @@
+@import "./settings/variables.scss";
+@import "./components/carousel.scss";
+@import "./components/story.scss";
+@import "./components/loader.scss";
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.ui {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding: 0 2rem;
+  background-color: $primary-background;
+}
+
+.main-section {
+  background-color: $secondary-background;
+  overflow: hidden;
+  width: 50vw;
+  position: relative;
+}
+
+@media screen and (max-width: 992px) {
+  .main-section {
+    width: 75vw;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .ui {
+    padding: 0;
+  }
+
+  .main-section {
+    width: 100vw;
+  }
+}
